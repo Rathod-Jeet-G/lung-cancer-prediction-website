@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="../static/css/nav.css">
+    <!-- <link rel="stylesheet" href="../static/css/footer.css"> -->
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- <link rel="stylesheet" href="../static/css/toast.css"> -->
+    <!-- <link rel="stylesheet" href="../static/css/home.css"> -->
+    <link rel="stylesheet" href="../static/css/scroll-to-top.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    {% block links %}{% endblock %}
+</head>
+<body>
+    <nav>
+        <button class="btnHamburger"><i class="zmdi zmdi-menu"></i></button>
+        <a class="logout" href="logout"><i class="zmdi zmdi-square-right"></i>Log Out</a>
+        <a href="#"><i class="zmdi zmdi-account-circle"></i>{{ session['email'] }}</a>
+        <a href="/contact"><i class="zmdi zmdi-email-open"></i>Contact Us</a>
+        <a href="/info"><i class="zmdi zmdi-info"></i>Information</a>
+        <a href="/predict"><i class="zmdi zmdi-present-to-all"></i>Predict</a>
+        <a class="title" href="/home"><i class="zmdi zmdi-laptop-chromebook"></i>Lung Cancer Prediction</a>
+    </nav>
+    {% block main %}{% endblock %}
+
+    <!-- <footer>
+        <span id="foot">&copy;Copyright&nbsp;</span>
+    </footer> -->
+    <button id="scroll-to-top"><i class="zmdi zmdi-long-arrow-up"></i></button>
+    <script src="{{ url_for('static', filename='js/scroll-to-top.js') }}"></script>
+
+    <script src="{{ url_for('static', filename='js/toast.js') }}"></script>
+    <!-- <script src="{{ url_for('static', filename='js/footer.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='js/nav.js') }}"></script>
+</body>
+</html>

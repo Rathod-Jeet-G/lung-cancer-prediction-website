@@ -1,0 +1,7 @@
+textarea{
+    width: 60vw !important;
+    height: 30vh !important;
+    resize: none;
+    border: 1px solid var(--headingColor);
+    border-radius: 5px;
+}

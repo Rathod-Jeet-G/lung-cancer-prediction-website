@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up for Lung Cancer Prediction Website</title>
+
+    <link rel="icon" href="../static/images/icon.jpg">
+
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/user.css">
+    <link rel="stylesheet" href="../static/css/msg.css">
+
+    <!-- <link rel="stylesheet" href="path/to/material-design-iconic-font/css/material-design-iconic-font.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+</head>
+
+<body>
+    <!-- <form action="singup-data" method="post"> -->
+        <div class="container" id="container">
+            <div class="imageView">
+                <img src="../static/images/doctor_img.avif" alt="doodle image">
+            </div>
+            
+            <div class="formView">
+                <h2 class="heading">Sign Up</h2>
+                <form action="/validate-user" id="signUpForm" method="post">
+                    <div class="formItem formLabel"><i class="zmdi zmdi-account"></i><label for="name">Name</label></div>
+                    <div class="formItem"><input type="text" id="name" name="name" title="Enter name here" placeholder="Enter Name"></div>
+                    <div class="formItem formLabel"><i class="zmdi zmdi-email"></i></i><label for="email">Email</label></div>
+                    <div class="formItem"><input type="email" id="email" name="email" title="Enter email id here" placeholder="Enter Email Id"></div>
+                    <div class="formItem formLabel"><i class="zmdi zmdi-lock"></i><label for="password">Password</label></div>
+                    <div class="formItem"><input type="password" id="password" name="password" title="Enter password here" placeholder="Enter Password" ></div>
+                    <div class="formItem formLabel"><i class="zmdi zmdi-lock-outline"></i><label for="conPassword">Confirm Password</label></div>
+                    <div class="formItem"><input type="password" id="conPassword" name="confirmPassword" title="Confirm password here" placeholder="Confirm Password"></div>
+                    <div class="formItem"><span class="togglePassword" id="togglePassword">&#x1F441; <label>Show Password</label></span></div>
+                    <!-- <div><input type="checkbox" id="showPw" class="showPw"/><label for="showPw">Show Password</label></div> -->
+                    <!-- <p class="data" style="color: white;background-color: rgb(239, 59, 95);border-radius: 15px;text-align: center;">{{data}}</p>
+                    <p class="data" style="color: white;background-color: rgb(239, 59, 95);border-radius: 15px;text-align: center;">{{pasmsg}}</p> -->
+                    
+                    
+                    <div class="formItem"><input class="signUpBtn" type="submit" title="Click here to login" value="Sign Up"></div>
+                </form>
+                <div class="formItem note">Already an user?&nbsp;<a href="/login" title="Click here to register">Login here</a></div>
+            </div>
+        </div>
+<!-- 
+    <div class="msgBox" id="msg-box">
+            <div class="msgHeading"><span class="msgTitle">Notice</span></div>
+            <div class="msgContent"><span class="msgText">If you don't have any account then enter necessary informaion and enter Signup button</span></div>
+            <div class="msgAction"><button id="ok-btn">Ok</button></div>
+        </div>
+    -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <!-- {% for category, message in messages %} -->
+    <div class="msgBox" id="msg-box">
+        <div class="msgHeading"><span class="msgTitle">{{ category }}</span></div>
+        <div class="msgContent"><span class="msgText">{{ message }}</span></div>
+        <!-- {% endfor %} -->
+        <div class="msgAction"><button id="ok-btn">Ok</button></div>
+    </div>
+    {% endif %}
+    {% endwith %}
+    
+    <script src="{{ url_for('static', filename='js/msg.js') }}"></script>
+    <!-- <script src="../static/js/msg.js"></script> -->
+    <!-- <script src="../static/js/showPassword.js"></script> -->
+    <script src="{{ url_for('static', filename='js/showPassword.js') }}"></script>
+    
+    <!-- </form> -->
+</body>
+
+</html>

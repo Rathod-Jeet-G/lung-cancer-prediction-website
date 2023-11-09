@@ -1,0 +1,79 @@
+{% extends "main.html" %}
+{% block title %}Welcome{% endblock %}
+{% block links %}
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/user.css">
+    <link rel="stylesheet" href="../static/css/toast.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <!-- <link rel="stylesheet" href="../static/css/nav.css"> -->
+    <!-- <link rel="stylesheet" href="../static/css/footer.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+{% endblock %}
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet"> -->
+{% block main %}
+    <div class="home-ad">
+        {% if status %}
+            <div id="toastView">
+                <span class="progress"></span>
+                <span>{{status}}</span>
+            </div>
+        {% endif %}
+        
+        <div class="poster">
+            <div class="doctorImg">
+                <img src="../static/images/doctor.jpg">
+            </div>
+            <div class="details">
+                <h1>LUNG CANCER PREDICTION SYSTEM</h1>
+                <p>Prediction page takes only numeric values (Yes or No). Once doctor or nurse inserts patient information, then he/she click on submit button at that time our machine learnig alorithm returns accurate answer. If you don't have a idea of parameter then go information page to read the information of parameter.</p>
+
+                <div class="btnPredict">
+                    <a href="/predict">Make Prediction</a>
+                </div>         
+            </div>
+        </div>
+    </div>
+
+    <div class="card-row">
+        <div class="card">
+            <span class="title-card">Comparission chart</span>
+            <img src="../static/images/model.png">
+        </div>
+        
+        
+        <div class="card">
+            <span class="title-card">Accurate Model detail</span>
+            <p>
+                XGBoost, which stands for eXtreme Gradient Boosting, is a popular and powerful machine learning algorithm used for supervised learning tasks, particularly in the field of regression and classification. It belongs to the ensemble learning category, and more specifically, it is a gradient boosting algorithm.
+            </p>
+        </div>
+        
+        
+        <div class="card">
+            <!-- <img src="../static/images/system.jpg"> -->
+            <span class="title-card">Accuracy</span>
+            <p>
+                Accuracy is calculated as the ratio of correctly predicted instances to the total number of instances in the dataset. It is typically expressed as a percentage:
+                Accuracy = (Number of Correct Predictions / Total Number of Predictions) * 100
+            </p>
+        </div>
+    </div>
+        <!-- <div class="column">
+            <div class="card">
+                <img src="../static/images/system.jpg">
+                <p>different model<br>
+                <p>
+                   
+                </p>
+
+                </p>
+            </div>
+        </div>
+         -->
+
+
+    <!-- </div> -->
+{% endblock %}

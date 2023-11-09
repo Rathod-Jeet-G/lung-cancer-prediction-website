@@ -1,0 +1,21 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+:root{
+  --primaryBackground: white;
+  --secondaryBackground: #e7ecf6;
+  /* --secondaryBackground: rgb(224 233 255); */
+  --btnBackground: #487eb2;
+  --headingColor: #205384;
+  --btnColor: white;
+  --toastBackground: #bad6cc;
+  /* --toastBackground: #a4c7bb; */
+  --toastColor: #323534;
+  --toastBorderColor: #323534;
+}
+
+*{
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Overpass', sans-serif;
+  user-select: none;
+}

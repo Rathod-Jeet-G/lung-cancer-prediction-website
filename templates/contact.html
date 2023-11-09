@@ -1,0 +1,50 @@
+{% extends "main.html" %}
+{% block title %}Contact Us{% endblock %}
+{% block links %}
+    <link rel="stylesheet" href="../static/css/form.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+    <link rel="stylesheet" href="../static/css/toast.css">
+    <link rel="stylesheet" href="../static/css/contact.css">
+{% endblock %}
+
+    <!-- <h1>Make Prediction</h1> -->
+    <!-- <div class="user">
+        <p> <img class="check" src="../static/images/check.png"> Doctor Email: {{session['email']}} </p></img>
+    </div> -->
+{% block main %}
+    {% if status %}
+    <div id="toastView">
+        <span class="progress"></span>
+        <span>{{status}}</span>
+    </div>
+    {% endif %}
+    <div class="container">
+        <h1 class="heading">Contact Us</h1>
+        <div class="formView">
+            <form action="/contact-us" method="post">
+                <div class="formItem">
+                    <label for="name" class="form-label"><i class="zmdi zmdi-account"></i>Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name" required>
+                </div>
+    
+                <div class="formItem">
+                    <label for="mail" class="form-label"><i class="zmdi zmdi-email"></i>Email</label>
+                    <input type="email" name="mail" id="mail" placeholder="Enter Your Email id" required>
+                </div>
+                
+                <div class="formItem">
+                    <label for="age" class="form-label"><i class="zmdi zmdi-comment-edit"></i>Message</label>
+                </div>
+                <div class="formItem">
+                    <textarea name="message" id="message" placeholder="Enter message here" title="Type message here" required></textarea>
+                </div>
+    
+                <div class="formItem">
+                    <button type="submit">Send Message</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,105 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /*  */
+}
+.row {
+    display: flex;
+}
+body{
+    background-color: #e7ecf6; 
+}
+
+input{
+    border: none;
+}
+
+.main {  
+     
+    position: relative;
+    /* background-image: url(../static/images/loginbg.jpg); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+.container {
+    margin-top: 20px;
+    position: absolute;
+    border-radius: 20px;
+    /* top: 13%; */
+    left: 5.5%;
+    width: 90%;
+    padding: 20px;
+    background-color: white;
+}
+.container h1{
+    
+    text-align: center;
+    color: #205384;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.inputbox1 {
+    /* margin-bottom: 10px; */
+    width: 50%;
+    position: relative;
+    padding: 20px;
+}
+.inputbox1 input {
+    width: 100%;
+    padding-top: 8px;
+    padding: 10px;
+    /* font-size: 18px; */
+    /* outline: none; */
+    /* border-radius: 5px; */
+    /* border: none; */
+    background-color: rgb(255, 255, 255);
+    border-bottom: 2px solid #205384;
+    transition: 0.5s;
+    
+}
+/* .inputbox1 input:hover{
+    border-bottom: 2px solid rgb(39, 230, 10);
+    border-radius: 15px;
+    transition: 0.5s;
+
+} */
+
+.inputbox1 span{
+    position: absolute;
+    left: 0;
+    padding-left: 34px;
+    padding-top: 14px;
+    pointer-events: none;
+    /* font-size: 1em; */
+    color: grey;
+    text-transform: uppercase;
+}
+.inputbox1 input:valid ~ span,
+.inputbox1 input:focus ~ span{
+    color: #205384;
+    transform: translateX(30px) translateY(-10px);
+    /* font-size: 20px; */
+    padding: 0 10px;
+    background: white;
+
+}
+.dct_pri{
+    width: 90px;
+}
+ 
+.user{
+    color: lawngreen;
+    /* font-size: 20px; */
+}
+.check{
+    width: 20px;
+}
+
+input:hover, input:active{
+    border: 2px solid var(--btnBackground);
+    border-radius: 4px;
+}

@@ -1,0 +1,212 @@
+{% extends "main.html" %}
+{% block title %}Make Prediction{% endblock %}
+{% block links %}
+    <link rel="stylesheet" href="../static/css/form.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+{% endblock %}
+
+    <!-- <h1>Make Prediction</h1> -->
+    <!-- <div class="user">
+        <p> <img class="check" src="../static/images/check.png"> Doctor Email: {{session['email']}} </p></img>
+    </div> -->
+{% block main %}
+    <div class="container">
+        <h1 class="heading">Make Prediction</h1>
+        <div class="formView">
+            <form action="prediction-data" method="post">
+                <div class="formItem">
+                    <label for="patient_name" class="form-label">Name</label>
+                    <input type="text" name="patient_name" id="patient_name" placeholder="Enter Patient Name" required>
+                </div>
+    
+                <div class="formItem">
+                    <label for="patient_mail" class="form-label">Patient Email</label>
+                    <input type="email" name="patient_mail" id="patient_mail" placeholder="Enter Patient Email id" required>
+                </div>
+                
+                <div class="formItem">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="number" name="age" id="age" placeholder="Enter Patient Age in Years" min="1" max="120" required>
+                </div>
+
+                <div class="formItem">
+                    <label class="form-label">Gender</label>
+                    <input type="radio" name="gender" id="gender_male" value="Male">
+                    <label for="gender_male" class="form_radio_field">Male</label>
+                    <input type="radio" name="gender" id="gender_female" value="Female">
+                    <label for="gender_female" class="form_radio_field">Female</label>
+                        <!-- <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </input> -->
+                <!-- </div> -->
+
+                <!-- <div class="formItem"> -->
+                    <label class="form-label">Chest Pain</label>
+                    <input type="radio" name="chest_pain" id="chest_pain_yes" class="yes" value="Yes">
+                    <label for="chest_pain_yes" class="form_radio_field">Yes</label>
+                    <input type="radio" name="chest_pain" id="chest_pain_no" class="no" value="No">
+                    <label for="chest_pain_no" class="form_radio_field">No</label>
+                    <!-- <select name="chest_pain" id="chest_pain" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select> -->
+                </div>
+    
+                <div class="formItem">
+                    <label class="form-label">Smoking</label>
+                    <input type="radio" name="smoking" id="smoking_yes" class="yes" value="Yes">
+                    <label for="smoking_yes" class="form_radio_field">Yes</label>
+                    <input type="radio" name="smoking" id="smoking_no" class="no" value="No">
+                    <label for="smoking_no" class="form_radio_field">No</label>
+                    <!-- <select name="smoking" id="smoking" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select> -->
+                <!-- </div> -->
+    
+                <!-- <div class="formItem"> -->
+                    <label class="form-label">Yellow Fingers</label>
+                    <input type="radio" name="yellow_fingers" id="yellow_fingers_yes" class="yes" value="Yes">
+                    <label for="yellow_fingers_yes" class="form_radio_field">Yes</label>
+                    <input type="radio" name="yellow_fingers" id="yellow_fingers_no" class="no" value="No">
+                    <label for="yellow_fingers_no" class="form_radio_field">No</label>
+                    <!-- <select name="yellow_fingers" id="yellow_fingers" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select> -->
+                </div>
+    
+                <div class="formItem">
+                    <label class="form-label">Anxiety</label>
+                    <input type="radio" name="anxiety" id="anxiety_yes" class="yes" value="Yes">
+                    <label for="anxiety_yes" class="form_radio_field">Yes</label>
+                    <input type="radio" name="anxiety" id="anxiety_no" class="no" value="No">
+                    <label for="anxiety_no" class="form_radio_field">No</label>
+                    <!-- <select name="anxiety" id="anxiety" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select> -->
+                <!-- </div> -->
+    
+                <!-- <div class="formItem"> -->
+                    <label class="form-label">Peer Pressure</label>
+                    <input type="radio" name="peer_preasure" id="peer_preasure_yes" class="yes" value="Yes">
+                    <label for="peer_preasure_yes" class="form_radio_field">Yes</label>
+                    <input type="radio" name="peer_preasure" id="peer_preasure_no" class="no" value="No">
+                    <label for="peer_preasure_no" class="form_radio_field">No</label>
+                    <!-- <select name="peer_preasure" id="peer_preasure" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select> -->
+                </div>
+    
+                <div class="formItem">
+                    <label class="form-label">Chronic Disease</label>
+                    <input type="radio" name="chronic_disease" id="chronic_disease_yes" class="yes" value="Yes">
+                    <label for="chronic_disease_yes" class="form_radio_field">Yes</label>
+                    <input type="radio" name="chronic_disease" id="chronic_disease_no" class="no" value="No">
+                    <label for="chronic_disease_no" class="form_radio_field">No</label>
+                    <!-- <select name="chronic_disease" id="chronic_disease" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select> -->
+                <!-- </div> -->
+    
+                <!-- <div class="formItem"> -->
+                    <label class="form-label">Fatigue</label>
+                    <input type="radio" name="fatigue" id="fatigue_yes" class="yes" value="Yes">
+                    <label for="fatigue_yes" class="form_radio_field">Yes</label>
+                    <input type="radio" name="fatigue" id="fatigue_no" class="no" value="No">
+                    <label for="fatigue_no" class="form_radio_field">No</label>
+                    <!-- <select name="fatigue" id="fatigue" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select> -->
+                </div>
+    
+                <div class="formItem">
+                    <label class="form-label">Allergy</label>
+                    <input type="radio" name="allergy" id="allergy_yes" class="yes" value="Yes">
+                    <label for="allergy_yes" class="form_radio_field">Yes</label>
+                    <input type="radio" name="allergy" id="allergy_no" class="no" value="No">
+                    <label for="allergy_no" class="form_radio_field">No</label>
+                    <!-- <select name="allergy" id="allergy" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select> -->
+                <!-- </div> -->
+    
+                <!-- <div class="formItem"> -->
+                    <label class="form-label">Wheezing</label>
+                    <input type="radio" name="wheezing" id="wheezing_yes" class="yes" value="Yes">
+                    <label for="wheezing_yes" class="form_radio_field">Yes</label>
+                    <input type="radio" name="wheezing" id="wheezing_no" class="no" value="No">
+                    <label for="wheezing_no" class="form_radio_field">No</label>
+                    <!-- <select name="wheezing" id="wheezing" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select> -->
+                </div>
+    
+                <div class="formItem">
+                    <label class="form-label">Alcohol Consumer</label>
+                    <input type="radio" name="alcohol_consumer" id="alcohol_consumer_yes" class="yes" value="Yes">
+                    <label for="alcohol_consumer_yes" class="form_radio_field">Yes</label>
+                    <input type="radio" name="alcohol_consumer" id="alcohol_consumer_no" class="no" value="No">
+                    <label for="alcohol_consumer_no" class="form_radio_field">No</label>
+                    <!-- <select name="alcohol_consumer" id="alcohol_consumer" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select> -->
+                <!-- </div> -->
+    
+                <!-- <div class="formItem"> -->
+                    <label class="form-label">Coughing</label>
+                    <input type="radio" name="coughing" id="coughing_yes" class="yes" value="Yes">
+                    <label for="coughing_yes" class="form_radio_field">Yes</label>
+                    <input type="radio" name="coughing" id="coughing_no" class="no" value="No">
+                    <label for="coughing_no" class="form_radio_field">No</label>
+                    <!-- <select name="coughing" id="coughing" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select> -->
+                </div>
+    
+                <div class="formItem">
+                    <label class="form-label">Shortness of Breath</label>
+                    <input type="radio" name="shortness_of_breath" id="shortness_of_breath_yes" class="yes" value="Yes">
+                    <label for="shortness_of_breath_yes" class="form_radio_field">Yes</label>
+                    <input type="radio" name="shortness_of_breath" id="shortness_of_breath_no" class="no" value="No">
+                    <label for="shortness_of_breath_no" class="form_radio_field">No</label>
+                    <!-- <select name="shortness_of_breath" id="shortness_of_breath" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select> -->
+                <!-- </div> -->
+    
+                <!-- <div class="formItem"> -->
+                    <label class="form-label">Swallowing difficulty</label>
+                    <input type="radio" name="swallowing_difficulty" id="swallowing_difficulty_yes" class="yes" value="Yes">
+                    <label for="swallowing_difficulty_yes" class="form_radio_field">Yes</label>
+                    <input type="radio" name="swallowing_difficulty" id="swallowing_difficulty_no" class="no" value="No">
+                    <label for="swallowing_difficulty_no" class="form_radio_field">No</label>
+                    <!-- <select name="swallowing_difficulty" id="swallowing_difficulty" required>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select> -->
+                </div>
+    
+                <div class="formItem">
+                    <button type="submit">Predict</button>
+                    <button type="reset">Reset</button>
+                </div>
+                <div class="result1">
+                    <p class="text1">Result</p>
+                    <p class="safe"> {{data1}} </p>
+                    <p class="die"> {{data2}} </p>
+                </div> 
+            </form>
+        </div>
+    </div>
+{% endblock %}

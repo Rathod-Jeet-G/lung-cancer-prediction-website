@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+
+i{
+    padding-right: 10px;
+}
+body{
+    background-color: var(--secondaryBackground);
+}
+
+details{
+    width: 80%;
+    margin: 2vw auto;
+    padding: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgb(171, 170, 170);
+    background-color: white;
+}
+
+details > p{
+    background-color: rgb(232, 244, 213);
+    color: rgb(5, 30, 5);
+    margin: 1.5em;
+    padding: 1.5em;
+    text-align: justify;
+    border-radius: 5px;
+}
+
+.title-info{
+    text-transform: capitalize;
+    background-color: white;
+    font-size: 1em;
+    color: var(--headingColor);
+}
+
+.num{
+    background-color: rgb(88, 116, 201);
+    color: white;
+    font-weight: bold;
+    padding: 7px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.heading-info{
+    color:var(--headingColor);
+    text-align: center;
+    margin: 4vh 0;
+}

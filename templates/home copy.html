@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/user.css">
+    <link rel="stylesheet" href="../static/css/toast.css">
+    <link rel="stylesheet" href="../static/css/home.css">
+</head>
+<body>
+    {% if status %}
+        <div id="toastView">
+            <span class="progress"></span>
+            <span>{{status}}</span>
+        </div>
+    {% endif %}
+    <div class="row">
+        <div class="nav">
+            <ul>
+                <li><a class="detail" href="logout">Logout</a></li>
+                <li><a class="home" href="profile">Profile</a></li>
+                <li><a class="home" href="info">Information</a></li>
+                <li><a class="home" href="about_us">Devloped By</a></li>
+                <li><a class="home" href="home">Home</a></li>
+
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div class="poster">
+        <div class="doctorimg">
+            <img src="../static/images/doctor1.jpg">
+        </div>
+
+
+        <div class="head1">
+
+            <div class="h1">
+                <h1>LUNG CANCER PREDICTION SYSTEM</h1>
+                <h3 class="h3">prediction page takes only numeric values (yes of no)</h3>
+                <h3 class="h3">Ones doctor or nures insert patient information then he/she click on submit button  at that time our machine learnig alorithm return accurate ans.</h3>
+                <h3 class="h3">If you don't have a idea of parameter then go information page to read the information of parameter</h3>
+
+        </div>
+        <div class="predict">
+            <ul class='loading-frame'>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+                <div class='circle'></div>
+            </ul>
+        </div>
+        <div class="btn1">
+            <a href="/predict">Prediction</a>
+        </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <!-- <p>--------image of comparission chart of different model accuracy------------</p> -->
+                <p>Comparission chart of different model accuracy</p>
+                <img src="../static/images/main_graph.png">
+                <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, modi. Modi suscipit reiciendis doloribus ab nam voluptatem aliquid ducimus labore ipsum eaque maxime animi, aut nesciunt esse blanditiis nihil deserunt.
+                </p> -->
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <!-- <img src="../static/images/machine.jpeg"> -->
+                <p>Accuret Model detail <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus doloremque vel minima placeat fugit. Iusto rem qui magni reiciendis itaque impedit maiores modi nesciunt tempore, maxime animi ex ea aliquam!</p>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <!-- <img src="../static/images/system.jpg"> -->
+                <p>% accuracy<br>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores itaque illum quibusdam ad cumque incidunt ipsa harum dolore, voluptate eos maxime consectetur doloremque earum quaerat labore exercitationem. Blanditiis, sequi enim!
+                    </ol>
+                </p>
+
+                </p>
+            </div>
+        </div>
+        <!-- <div class="column">
+            <div class="card">
+                <img src="../static/images/system.jpg">
+                <p>different model<br>
+                <p>
+                   
+                </p>
+
+                </p>
+            </div>
+        </div>
+         -->
+
+
+    </div>
+    <div class="footer">
+        <p>&copy;Copyright 2023
+    </div>
+ 
+    <!-- <form action="/logout">
+        <button id="logout" title="Click here to logout">Logout</button>
+    </form> -->
+    <!-- <span id="welcome">Welcome, {{session['email']}}</span> -->
+    
+    <script src="{{ url_for('static', filename='js/toast.js') }}"></script>
+</body>
+</html>

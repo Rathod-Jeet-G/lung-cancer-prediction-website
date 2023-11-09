@@ -1,0 +1,84 @@
+/* *{
+    pointer-events: none;
+} */
+.msgBox {
+    max-width: 40%;
+    /* width: 40%; */
+    /* height: 30%; */
+    position: fixed;
+    /* top: 30%; */
+    /* left: 30%; */
+    background-color: var(--primaryBackground);
+    box-shadow: 5px 5px 5px rgb(171, 170, 170);
+    border-radius: 10px;
+    padding: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 8px; */
+    box-sizing: border-box;
+    /* pointer-events: auto !important; */
+    /* display: none; */
+    /* position: absolute; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.msgTitle {
+    color: var(--headingColor);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+.msgContent {
+    border-top: 1px solid var(--headingColor);
+    padding-top: 1em;
+    /* padding-top: 2em; */
+    /* text-align: justify; */
+    font-size: 0.90em;
+    /* width: 100%; */
+    text-align: center;
+}
+
+/* .msgAction button {
+    text-transform: uppercase;
+    background-color: var(--btnBackground) !important;
+    color: var(--btnColor);
+    border: none;
+    border-radius: 2px;
+    padding: 0.5em 5em;
+    cursor: pointer;
+    margin: 10px;
+} */
+
+.msgAction button {
+    text-transform: uppercase;
+    background-color: var(--btnBackground);
+    color: var(--btnColor);
+    border: none;
+    border-radius: 2px;
+    /* padding: 0.5em 5em; */
+    padding: 1vh 5vw;
+    cursor: pointer;
+    margin: 10px;
+}
+
+
+
+.msgTitle {
+    color: var(--headingColor);
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+@media screen and (max-width: 1000px) {
+    .msgBox {
+        /* width: 60%; */
+        max-width: 40%;
+        /* left: 20%; */
+        /* height: 40%; */
+    }
+}

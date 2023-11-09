@@ -1,0 +1,21 @@
+#otpInputs > input[type="text"] {
+    width: 1.5em !important;
+    text-align: center;
+    border: 1px solid var(--headingColor) !important;
+    border-radius: 2px;
+}
+
+.formItem button#sendOtp{
+    background-color: var(--btnBackground);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    font-size: 0.75em;
+    cursor: pointer;
+}
+/* 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */

@@ -1,0 +1,134 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap'); */
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.home-ad{
+    /* padding-top: 100px; */
+    background-color: #9FD9DD;
+}
+
+.poster{
+    display: flex;
+}
+
+.poster .details{
+    text-align: justify;
+    padding: 30px;
+    width: 160%;
+    align-self: center;
+}
+
+.doctorImg img{
+    width: 70%;
+    margin: 0;
+}
+
+.doctorImg{
+    width: 100%;
+    text-align: center;
+}
+
+.btnPredict{
+    padding: 20px 0;
+}
+
+.btnPredict a{
+    background-color:rgb(241, 18, 62);
+    border-radius: 5px;
+    padding: 10px;
+    letter-spacing: 1px;
+    color: white;
+    box-shadow: 5px 5px 5px rgb(24, 24, 24);
+    text-decoration: none;
+}
+
+.btnPredict a:hover{
+    background-color: var(--btnBackground);
+    transition: 0.5s;
+}
+
+#toastView{
+    position: relative;
+    top: 0;
+}
+
+.card-row{
+    display: flex;
+    /* flex-wrap: wrap; */
+}
+
+.card-row .card{
+    width: 30%;
+    box-shadow: 0 2px 4px 0 rgba(110, 110, 110, 0.2); 
+    border-radius: 7px;
+    background-color: #ffffff; 
+    margin: 2em;
+    padding: 1.5em;
+    box-shadow: 5px 5px 5px rgb(71, 71, 71);
+}
+
+.card-row .card .title-card{
+    background-color: var(--btnBackground);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    display: inline-block;
+    /* margin: auto; */
+    width: 100%;
+    text-align: center;
+}
+
+.card-row .card img{
+    /* width: 80%; */
+    /* text-align: center; */
+    padding-top: 10px;
+    /* display: inline-block; */
+    /* margin: auto; */
+    width: 100%;
+    /* text-align: center; */
+}
+.card-row .card p{
+    padding-top: 10px;
+    /* padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px; */
+    text-align: justify;
+    /* border-bottom: solid 1px; */
+  }
+/* .column {
+    float: left;
+    width: 33%;
+    padding: 0 20px;
+    padding-top: 40px;
+    display: flex;
+    padding-bottom: 40px;
+}
+.card {
+       
+  }
+.card img{
+      width: 100%;
+      border-top-left-radius:10px;
+      border-top-right-radius:10px;
+}
+.card p{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    text-align: justify;
+  } */
+
+  @media screen and (max-width: 1000px) {
+    .card-row{
+        flex-direction: column;
+        /* flex-wrap: wrap; */
+    }
+
+    .card-row .card{
+        width: 90%;
+    }
+}

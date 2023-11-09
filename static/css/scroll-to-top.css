@@ -1,0 +1,14 @@
+#scroll-to-top{
+    background-color: rgb(88, 116, 201);
+    color: white;
+    border-radius: 100%;
+    border: none;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 92vw;
+    bottom: 2vh;
+    padding: 0 12px;
+    cursor: pointer;
+}

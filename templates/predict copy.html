@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Make Prediction</title>
+    <link rel="stylesheet" href="../static/css/predict.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h1>Prediction Page</h1>    
+            <div class="user">
+                <p> <img class="check" src="../static/images/check.png">  Doctor Email:  {{data}} </p></img>
+            </div>
+        
+    
+            <form action="prediction_data" method="post">
+                <div class="row">
+                    <div class="inputbox1">
+                        
+                        <input type="text" name="pname" required="required">
+                        <span>Paitent Name</span>
+                    </div>
+                    <div class="inputbox1">
+                        <input type="email" name="pmail" required="required">
+                        <span>Paitent Email</span>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="inputbox1">
+                        <input type="text" name="gender" required="required">
+                        <span>Gender</span>
+                    </div>
+                    <div class="inputbox1">
+                        <input type="number" name="age"required="required">
+                        <span>Age</span>
+                    </div>
+                    <div class="inputbox1">
+                        
+                        <!-- <input type="text" name="smoking" required="required"> -->
+                        <select>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                        <span>Smoking</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="inputbox1">
+                        
+                        <input type="text" name="yellow_fingers" required="required">
+                        <span>Yellow_fingers</span>
+                    </div>
+                    <div class="inputbox1">
+                        
+                        <input type="text" name="anxiety" required="required">
+                        <span>Anxiety</span>
+                    </div>
+                    <div class="inputbox1">
+                        
+                        <input type="text" name="peer_pressure" required="required">
+                        <span>Peer Pressure</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="inputbox1">
+                        
+                        <input type="text" name="chronic_disease" required="required">
+                        <span>Chronic Disease</span>
+                    </div>
+                    <div class="inputbox1">
+                        
+                        <input type="text" name="fatigue" required="required">
+                        <span>Fatigue</span>
+                    </div>
+                    <div class="inputbox1">
+                        
+                        <input type="text" name="allergy" required="required">
+                        <span>Allergy</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="inputbox1">
+                        
+                        <input type="text" name="wheezing" required="required">
+                        <span>Wheezing</span>
+                    </div>
+                    <div class="inputbox1">
+                        
+                        <input type="text" name="alcohol_consuming" required="required">
+                        <span>Alcohol Consuming</span>
+                    </div>
+                    <div class="inputbox1">
+                        
+                        <input type="text" name="coughing" required="required">
+                        <span>Coughing</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="inputbox1">
+                        
+                        <input type="text" name="shortness_of_breath" required="required">
+                        <span>Shortness of Breath</span>
+                    </div>
+                    <div class="inputbox1">
+                        
+                        <input type="text" name="swallowing_difficulty" required="required">
+                        <span>Swallowing difficulty</span>
+                    </div>
+                    <div class="inputbox1">
+                        <input type="text" name="chest_pain" required="required">
+                        <span>Chest Pain</span>
+                    </div>
+                </div>
+                <input type="submit" value="submit">
+            </div>
+        </div>
+    </form>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+   
+
+</body>
+</html>

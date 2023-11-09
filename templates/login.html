@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In at Lung Cancer Prediction Website</title>
+
+    <link rel="icon" href="../static/images/icon.jpg">
+
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/user.css">
+    <link rel="stylesheet" href="../static/css/msg.css">
+    <link rel="stylesheet" href="../static/css/notice.css">
+    <link rel="stylesheet" href="../static/css/toast.css">
+
+    <!-- <link rel="stylesheet" href="path/to/material-design-iconic-font/css/material-design-iconic-font.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <!-- <style>
+        .container{
+            margin-top: 17vh;
+        }
+    </style> -->
+</head>
+
+<body>
+    <!-- <form action="login-data" method="post"> -->
+        <div class="container" id="container">
+            <div class="imageView">
+                <img src="../static/images/doctor_img.avif" alt="doodle image">
+            </div>
+            <div class="formView">
+                <h2 class="heading">Log In</h2>
+                <form action="/validate-login" method="post">
+                    <div class="formItem formLabel"><i class="zmdi zmdi-email"></i><label for="email">Email</label></div>
+                    <div class="formItem"><input type="email" id="email" name="email" title="Enter email id here" placeholder="Enter Email Id"></div>
+                    <div class="formItem formLabel"><i class="zmdi zmdi-key"></i><label for="password">Password</label></div>
+                    <div class="formItem"><input type="password" name="password" id="password" title="Enter password here" placeholder="Enter Password"></div>
+                    <div class="formItem"><span class="togglePassword" id="togglePassword">&#x1F441; <label>Show Password</label></span></div>
+                    <!-- <div><input type="checkbox" id="showPw" class="showPw"/><label for="showPw">Show Password</label></div> -->
+                    <!-- <p style="color: white;background-color: rgb(251, 78, 113);border-radius: 3px;text-align: center;">{{invalid_uname}}</p> -->
+                    <div class="formItem"><input type="submit" title="Click here to login" value="Log In"></div>
+                </form>
+                <div class="formItem note">Not an user?&nbsp;<a href="/signup" title="Click here to register">Register here</a></div>
+                <div class="formItem note">Forgot Password?&nbsp;<a href="/reset-password" title="Click here to reset password">Reset Password</a></div>
+            </div>
+        </div>
+        
+        <div class="notice" id="notice">
+            <div class="msgContent"><span class="msgText">This website uses local storage and cookie storage to ensure you get the best experience on our website.</span><a href="https://jdnunez.com/en/cookies-and-local-storage-policy" target="_blank">Learn more</a></div>
+            <div class="msgAction"><button id="okBtnNotice"  class="ok-btn">Ok, Got it...!</button></div>
+            <!-- <script src="../static/js/notice.js"></script> -->
+            <!-- <script src="../static/js/showPassword.js"></script> -->
+        </div>
+    <!-- </form> -->
+
+    {% if status %}
+        <div id="toastView">
+            <span class="progress"></span>
+            <span>{{status}}</span>
+        </div>
+    {% endif %}
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="msgBox" id="msg-box">
+        <div class="msgHeading"><span class="msgTitle">{{ category }}</span></div>
+        <div class="msgContent"><span class="msgText">{{ message }}</span></div>
+        {% endfor %}
+        <div class="msgAction"><button id="ok-btn">Ok</button></div>
+    </div>
+    {% endif %}
+    {% endwith %}
+    
+    <script src="{{ url_for('static', filename='js/notice.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/msg.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/toast.js') }}"></script>
+    <!-- <script src="../static/js/msg.js"></script> -->
+    <!-- <script src="../static/js/showPassword.js"></script> -->
+    <script src="{{ url_for('static', filename='js/showPassword.js') }}"></script>
+
+</body>
+
+</html>
